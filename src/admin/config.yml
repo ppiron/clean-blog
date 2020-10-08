@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  repo: ppiron/cvtest
+  branch: master # Branch to update (optional; defaults to master)
+
+local_backend: true
+
+publish_mode: editorial_workflow
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+
+display_url: http://localhost:8080
+
+collections:
+  - name: "experience" # Used in routes, e.g., /admin/collections/experience
+    label: "Experience" # Used in the UI
+    folder: "src/experience"
+    create: true # Allow users to create new documents in this collection
+    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Company", name: "company", widget: "string" }
+      - { label: "Start Date", name: "startdate", widget: "datetime" }
+      - { label: "End Date", name: "enddate", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Image"
+        name: "thumbnail"
+        required: false
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+  - name: "education" # Used in routes, e.g., /admin/collections/experience
+    label: "Education" # Used in the UI
+    folder: "src/education"
+    create: true # Allow users to create new documents in this collection
+    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "School", name: "school", widget: "string" }
+      - { label: "Start Date", name: "startdate", widget: "string" }
+      - { label: "End Date", name: "enddate", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Image"
+        name: "thumbnail"
+        required: false
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+  - name: "skills" # Used in routes, e.g., /admin/collections/experience
+    label: "Skills" # Used in the UI
+    folder: "src/skills"
+    create: true # Allow users to create new documents in this collection
+    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Skilltype", name: "skilltype", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Thumbnails"
+        name: "thumbnails"
+        required: false
+        widget: list
+        field: { label: "Image", name: "image", widget: image }

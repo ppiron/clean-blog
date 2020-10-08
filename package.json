@@ -1,0 +1,20 @@
+{
+  "name": "11ty-test",
+  "version": "1.0.0",
+  "description": "![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss src/index.pcss -o src/css/style.css --watch",
+    "start": "eleventy --serve"
+  },
+  "author": "Pippo",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "postcss": "^8.0.9",
+    "postcss-cli": "^8.0.0",
+    "postcss-preset-env": "^6.7.0"
+  },
+  "dependencies": {}
+}
