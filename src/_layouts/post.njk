@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+
+<div class="hero hero-post">
+  <div class="hero__content-post">
+    <div class="hero__title-post">{{ title }}</div>
+    <div class="hero__subtitle-post">{{ sub }}</div>
+    <div class="hero__author-post">{{ author }}</div>
+  </div>
+</div>
+<section class="blog__list">
+  {{ content | safe }}
+</section>
