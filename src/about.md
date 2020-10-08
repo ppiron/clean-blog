@@ -1,7 +1,7 @@
 ---
-layout: base.njk
-hero__title: "About me"
-hero__sub: "Mi piace prendere pippo"
+layout: page.njk
+title: "About me"
+sub: "Mi piace prendere pippo"
 cssFile: "about.css"
 ---
 
