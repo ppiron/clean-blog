@@ -6,9 +6,18 @@ layout: base.njk
   <div class="hero__content-post">
     <div class="hero__title-post">{{ title }}</div>
     <div class="hero__subtitle-post">{{ sub }}</div>
-    <div class="hero__author-post">{{ author }}</div>
+    <div class="hero__author-post">Posted by <span>{{ author}}</span> on {{ page.date | makeDate }}</div>
   </div>
 </div>
-<section class="blog__list">
+<section class="blog__post">
+  {% if gallery %}
+    <div class="gallery">
+      {% for pic in gallery %}
+        <img src={{pic}} alt="">
+      {% endfor %}
+    </div>
+  {% endif %}
   {{ content | safe }}
 </section>
+
+
