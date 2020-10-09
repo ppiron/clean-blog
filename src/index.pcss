@@ -67,8 +67,6 @@ nav {
 }
 
 main {
-  /*   height: 100vh; */
-  /*   max-width: 200px; */
   margin: 0;
   font-family: "Lora";
   font-size: 1.25rem;
@@ -77,8 +75,6 @@ main {
 
 .hero {
   height: 530px;
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,33 +89,115 @@ main {
   font-weight: 400;
 }
 
-.hero__content-post {
-  max-width: 50%;
-}
-
 .hero-post {
   height: 630px;
 }
 
+.hero__content-post {
+  max-width: 55%;
+  font-family: "Open Sans", sans-serif;
+}
+
 .hero__title-post {
-  font-size: 3rem;
+  font-size: 3.25rem;
+  line-height: 1.2;
 }
 
 .hero__subtitle-post {
-  font-size: 2rem;
+  margin-top: 14px;
+  font-size: 1.5rem;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .hero__author-post {
+  margin-top: 22px;
   font-size: 1.125rem;
   font-weight: 400;
+  font-family: "Lora";
+  & span {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.blog__list,
+.blog__post {
+  max-width: 734px;
+  margin: 0 auto;
+  margin-top: 90px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.blog__post img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.blog__post blockquote {
+  font-size: 1rem;
+  color: #868e96;
+  font-family: "Lora";
+  margin-left: 0;
   font-style: italic;
 }
 
-.blog__list {
-  max-width: 768px;
-  margin: 0 auto;
-  margin-top: 50px;
+.gallery {
+  display: flex;
+  height: 100px;
+  & img {
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+}
+
+.post {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+  & > div:not(.post__author):hover {
+    color: teal;
+  }
+  & a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+  }
+}
+
+.post__title {
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.post__sub {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.post__author {
+  margin-top: 14px;
+  font-family: "Lora";
+  font-size: 1rem;
+  color: #868e96;
+  & span {
+    color: initial;
+    cursor: pointer;
+    &:hover {
+      color: teal;
+      text-decoration: underline;
+    }
+  }
 }
 
 footer {
