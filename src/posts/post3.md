@@ -1,13 +1,10 @@
 ---
 layout: post.njk
-name: "post1"
-title: "Man must explore, and this is exploration at its greatest"
-sub: "Problems look mighty small from 150 miles up."
-author: "Pippo"
-heroUrl: "https://images.unsplash.com/photo-1597073591683-0c4b9355d9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-gallery:
-  - "/images/uploads/nota.png"
-  - "/images/uploads/img_0003.jpg"
+name: "post3"
+title: "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine."
+sub: ""
+author: "Poro'Endi"
+heroUrl: "https://images.unsplash.com/photo-1574778116945-da8d74e9d546?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1398&q=80"
 tags:
   - posts
 ---
@@ -22,12 +19,9 @@ quam alias explicabo recusandae, dicta harum consequuntur fuga
 excepturi exercitationem error? Quidem inventore vero nulla asperiores
 totam ex aut? Harum!
 
-![Minion](https://images.unsplash.com/photo-1551298457-c72eced6d0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)
-
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum
-> dolores ex iusto est consectetur nisi laboriosam esse, eius cupiditate
-> quidem autem vel aliquid magnam commodi molestias qui beatae eos!
-
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum
+dolores ex iusto est consectetur nisi laboriosam esse, eius cupiditate
+quidem autem vel aliquid magnam commodi molestias qui beatae eos!
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem eum,
 quam alias explicabo recusandae, dicta harum consequuntur fuga
 excepturi exercitationem error? Quidem inventore vero nulla asperiores
