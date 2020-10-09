@@ -20,13 +20,26 @@ module.exports = function (eleventyConfig) {
       10: "November",
       11: "December",
     };
-    return `${months[dat.getMonth()]}, ${dat.getFullYear()}`;
+
+    return `${months[dat.getMonth()]} ${dat.getDate()}, ${dat.getFullYear()}`;
   });
 
   eleventyConfig.addFilter("makeSvg", function (value) {
     return `<div class="icon">
         ${fs.readFileSync(`./src${value}`, "utf8")}
         </div>`;
+  });
+
+  eleventyConfig.addShortcode("heroStyle", function (heroUrl) {
+    return `<style>
+              .hero {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                  url(${heroUrl});
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+              }
+            </style>`;
   });
 
   eleventyConfig.addPassthroughCopy("src/img");
