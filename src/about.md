@@ -1,11 +1,12 @@
 ---
 layout: page.njk
 title: "About me"
-sub: "Mi piace prendere pippo"
-cssFile: "about.css"
+sub: "Mucche che fanno fete"
+# cssFile: "about.css"
+heroUrl: "https://images.unsplash.com/photo-1507103011901-e954d6ec0988?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 ---
 
-Mi chiamo pippo e prendo... Ho detto!
+# Mi chiamo pippo e prendo... Ho detto!
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum
 dolores ex iusto est consectetur nisi laboriosam esse, eius cupiditate
