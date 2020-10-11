@@ -17,11 +17,28 @@ collections:
     label: "Posts" # Used in the UI
     folder: "src/posts"
     create: true # Allow users to create new documents in this collection
-    slug: "name.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "sub", widget: "string" }
+      - { label: "Subtitle", name: "sub", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "post.njk",
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["posts"] }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "HeroImage",
+          name: "heroUrl",
+          widget: "string",
+          default: "https://images.unsplash.com/photo-1597073591683-0c4b9355d9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        }
+      - label: "Gallery"
+        name: "gallery"
+        required: false
+        widget: list
+        field: { label: "Image", name: "image", widget: image }
