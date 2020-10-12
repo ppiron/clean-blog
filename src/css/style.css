@@ -212,6 +212,60 @@ main {
       text-decoration: underline;
     }
 
+.older-button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end
+}
+
+.older-button a {
+    display: flex;
+    width: 140px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: teal;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700
+  }
+
+.older-button a:hover {
+      background-color: #005757;
+    }
+
+.pag-buttons {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end
+}
+
+.pag-buttons a {
+    display: flex;
+    /* padding: 12px; */
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: teal;
+    text-decoration: none;
+    margin-right: 5px
+  }
+
+.pag-buttons a:hover {
+      background-color: #005757;
+    }
+
+.pag-buttons .active {
+    box-sizing: content-box;
+    border-bottom: 3px solid #db504a;
+  }
+
 footer {
   height: 240px;
   display: flex;
