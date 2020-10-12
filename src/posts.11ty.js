@@ -1,4 +1,4 @@
-class Test {
+class AllPosts {
   data() {
     return {
       layout: "page.njk",
@@ -8,7 +8,10 @@ class Test {
         "https://images.unsplash.com/photo-1594641673584-e7a55adf1e85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80",
       pagination: {
         data: "collections.posts",
-        size: 4,
+        size: 2,
+        before: function (data) {
+          return data.sort((a, b) => b.data.page.date - a.data.page.date);
+        },
       },
     };
   }
@@ -18,8 +21,8 @@ class Test {
     return `
     ${data.pagination.items
       .map(function (post) {
-        // console.log(this);
         return `
+      
       <div class="post">
         <div>
           <a href=${post.url}>
@@ -40,8 +43,25 @@ class Test {
       `;
       })
       .join("\n")}
+      <div class="pag-buttons">${
+        data.pagination.pageNumber > 0
+          ? `<a href=${data.pagination.href.previous}><</a>`
+          : ""
+      }${data.pagination.pages
+      .map((_, index) => {
+        return `<a class="${
+          data.pagination.hrefs[index] === data.page.url ? "active" : ""
+        }"
+          href="${data.pagination.hrefs[index]}">${index + 1}</a>`;
+      })
+      .join("")}${
+      data.pagination.pageNumber < data.pagination.pages.length - 1
+        ? `<a href="${data.pagination.href.next}">></a>`
+        : ""
+    }
+      </div>  
     `;
   }
 }
 
-module.exports = Test;
+module.exports = AllPosts;
