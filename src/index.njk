@@ -25,3 +25,6 @@ heroUrl: "https://images.unsplash.com/photo-1594641673584-e7a55adf1e85?ixlib=rb-
     </div>
   </div>
 {% endfor %}
+{% if (collections.posts | length) > (lastPosts[0] | length) %}
+  <div class="older-button"><a href="/olderPosts"><span>Older posts&nbsp;&nbsp;&rarr;</span></a></div>
+{% endif %}
