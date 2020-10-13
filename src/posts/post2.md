@@ -2,7 +2,7 @@
 sub: We predict too much for the next year and yet far too little for the next ten.
 layout: post.njk
 name: post2
-author: Endi
+author: Pippo
 gallery:
   - /images/uploads/img_0007.jpg
   - /images/uploads/horsepoop.png

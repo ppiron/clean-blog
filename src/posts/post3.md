@@ -3,7 +3,7 @@ layout: post.njk
 name: "post3"
 title: "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine."
 sub: ""
-author: "Poro'Endi"
+author: "Pippo"
 heroUrl: "https://images.unsplash.com/photo-1574778116945-da8d74e9d546?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1398&q=80"
 date: Last Modified
 tags:
