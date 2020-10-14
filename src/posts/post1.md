@@ -8,7 +8,7 @@ gallery:
   - /images/uploads/img_0003.jpg
 heroUrl: https://images.unsplash.com/photo-1597073591683-0c4b9355d9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
 title: Man must explore, and this is exploration at its greatest
-date: Last Modified
+date: Created
 tags:
   - posts
 ---

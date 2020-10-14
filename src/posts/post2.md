@@ -8,7 +8,7 @@ gallery:
   - /images/uploads/horsepoop.png
 heroUrl: https://images.unsplash.com/photo-1600699102933-d5179ccba476?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
 title: Science has not yet mastered prophecy
-date: Last Modified
+date: Created
 tags:
   - posts
 ---
