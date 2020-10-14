@@ -8,7 +8,7 @@ exports.data = {
     data: "collections.posts",
     size: 1,
     before: function (data) {
-      console.log(data.map((i) => [i.data.page.date, i.data.author]));
+      // console.log(data.map((i) => [i.data.page.date, i.data.author]));
       // return data.filter((post) => post.data.author === "Endi");
       return data.sort((a, b) => b.data.page.date - a.data.page.date).slice(2);
     },
@@ -16,7 +16,7 @@ exports.data = {
 };
 
 exports.render = function (data) {
-  // console.log(data.pagination.items);
+  // console.log(data.pagination.items[0].data);
   let self = this;
   return `
     ${data.pagination.items
@@ -36,7 +36,7 @@ exports.render = function (data) {
         <div class="post__author">
           Posted by <span>${
             post.data.author
-          }</span> on ${self.makeDate(post.date)}
+          }</span> on ${self.makeDate(post.data.page.date)}
         </div>
       </div>
       `;

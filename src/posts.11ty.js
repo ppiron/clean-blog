@@ -37,7 +37,7 @@ class AllPosts {
         <div class="post__author">
           Posted by <span>${
             post.data.author
-          }</span> on ${self.makeDate(data.page.date)}
+          }</span> on ${self.makeDate(post.data.page.date)}
         </div>
       </div>
       `;
