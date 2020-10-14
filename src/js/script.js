@@ -147,7 +147,7 @@ blogList.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(Number(event.target.textContent));
     if (Number(event.target.textContent)) {
-      const path = `filtered/${event.target.textContent}/`;
+      const path = `filtered/${Number(event.target.textContent) - 1}/`;
       console.log(path);
       history.replaceState(
         { oldState: blogList.innerHTML },
