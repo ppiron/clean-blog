@@ -97,8 +97,13 @@ const paginateArray = (array, itemsPerPage) => {
   return pagination;
 };
 
+// window.addEventListener("beforeunload", (e) => {
+//   e.preventDefault();
+//   e.returnValue = "";
+//   console.log(window.performance.getEntriesByType("navigation"));
+// });
+
 window.addEventListener("popstate", (e) => {
-  console.log(e);
   if (e.state.oldState) {
     blogList.innerHTML = e.state.oldState;
   }
@@ -148,7 +153,7 @@ blogList.addEventListener("click", (event) => {
     console.log(Number(event.target.textContent));
     if (Number(event.target.textContent)) {
       const path = `filtered/${Number(event.target.textContent) - 1}/`;
-      console.log(path);
+      // console.log(path);
       history.replaceState(
         { oldState: blogList.innerHTML },
         null,
